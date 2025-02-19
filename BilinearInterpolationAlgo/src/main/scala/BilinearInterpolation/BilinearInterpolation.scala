@@ -1,7 +1,6 @@
-// code that performs bilinear interpolation given the coordinates and the values
-// at the corners of a rectangle
+package BilinearInterpolation
 
-object BilinearInterpolation {
+object BilinearInterpolation{
   def interpolate(x: Double, y: Double,
                   x1: Double, y1: Double, f11: Double,
                   x2: Double, y2: Double, f21: Double,
@@ -28,8 +27,8 @@ object BilinearInterpolation {
     val f12 = 1.0
     val f22 = 0.0
 
-    val x = 0.5
-    val y = 0.5
+    val x = 0.4
+    val y = 0.9
     val result = interpolate(x, y, x1, y1, f11, x2, y2, f21, f12, f22)
 
     println(s"Interpolated value at ($x, $y) is: $result")
